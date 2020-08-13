@@ -65,3 +65,14 @@ var obj = {
     } 
 }
 console.log(obj);
+
+
+/**********************************
+ * 
+ * We can create function as needed
+ * 
+ *********************************/
+
+//  Here we are using self invoking function
+var sum = 10 + (function(){ return 10 })();
+console.log(sum);
