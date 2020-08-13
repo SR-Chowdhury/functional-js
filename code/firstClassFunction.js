@@ -76,3 +76,20 @@ console.log(obj);
 //  Here we are using self invoking function
 var sum = 10 + (function(){ return 10 })();
 console.log(sum);
+
+
+/***************************************
+ * 
+ * We can pass a function as an argument
+ * 
+ **************************************/
+
+function greeting4(name) {
+    return 'hello, ' + name;
+}
+
+function greeting4v2(input, gree4Fun) {
+    return gree4Fun(input);
+    // console.log(gree4Fun(input));
+}
+console.log(greeting4v2('Shihan', greeting4));
