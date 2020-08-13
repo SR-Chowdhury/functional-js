@@ -62,6 +62,6 @@ var obj = {
     function: greeting3('Shihan'),
     print: function() {
         console.log('Hi');
-    }
+    } 
 }
 console.log(obj);
