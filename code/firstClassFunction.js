@@ -45,3 +45,23 @@ console.log(arr);
 //  Here we can pass a function from an Array;
 arr.push(greeting2);
 console.log(arr);
+
+
+/*********************************************************
+ * 
+ * A function can be stored as an object field or porperty
+ * 
+ ********************************************************/
+
+function greeting3(name) {
+    return 'hello, ' +  name;
+}
+var obj = {
+    age: '28',
+    health: 'good',
+    function: greeting3('Shihan'),
+    print: function() {
+        console.log('Hi');
+    }
+}
+console.log(obj);
