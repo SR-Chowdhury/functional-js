@@ -8,10 +8,14 @@
 
 **************************/
 
-/*** A function can be stored in a variable ***/
+/******************************************
+ * 
+ * A function can be stored in a variable
+ * 
+ *****************************************/
 
-function greeting(name){
-    return 'Hello, '+ name;
+function greeting(name) {
+    return 'Hello, ' + name;
 }
 var print = greeting("Shihan Chowdhury");
 console.log(print);
@@ -23,3 +27,21 @@ console.log(firstVar('Shakib Al Hasan'));
 // Again we can use firstVar as a function 
 var secondVar = firstVar;
 console.log(secondVar('Mashrafi Bin Mortaza'));
+
+
+/******************************************
+ * 
+ * A function can be stored in an array
+ * 
+ *****************************************/
+
+function greeting2(position) {
+    return 'I am the ' + position;
+}
+//  Here we can pass a function as well as we can traverse a fucntion from an Array; 
+var arr = ['Winner or Looser, ', greeting2('Winner')];
+console.log(arr);
+
+//  Here we can pass a function from an Array;
+arr.push(greeting2);
+console.log(arr);
