@@ -23,3 +23,11 @@ console.log(firstVar('Shakib Al Hasan'));
 // Again we can use firstVar as a function 
 var secondVar = firstVar;
 console.log(secondVar('Mashrafi Bin Mortaza'));
+
+/*********************************************************
+ * 
+ * A function can be stored as an object field or porperty
+ * 
+ ********************************************************/
+
+ 
