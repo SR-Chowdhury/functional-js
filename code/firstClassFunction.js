@@ -93,3 +93,27 @@ function greeting4v2(input, gree4Fun) {
     // console.log(gree4Fun(input));
 }
 console.log(greeting4v2('Shihan', greeting4));
+
+
+/************************************************
+ * 
+ * We can return a function from another function
+ * 
+ ***********************************************/
+
+ function base(x) {
+    return function power(n) {
+        var result = 1;
+        for (var i=0; i<x; i++) {
+            result *= n;
+        }
+        return result;
+    }
+ }
+var b = base(2);
+var p = b(5);
+console.log(b);
+console.log(p);
+
+ var result = base(2)(5);
+ console.log(result);
