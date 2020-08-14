@@ -85,3 +85,19 @@ greeting4(obj, function(email) {
 
 /*****************************************/
 
+// Now we create two call back function 
+function greeting5(args, cbf1, cbf2) {
+    console.log('hello, ' + args);
+    cbf1(args);
+    cbf2(args);
+}
+greeting5('Shihan', function(args){
+    var data = args.toUpperCase();
+    console.log('Uppercase of ' + args + ' is: ' + data);
+},
+    function(args) {
+        var data = args.toLowerCase();
+        console.log('Lowercase of ' + args + ' is: ' + data);
+        console.log('And the lenght of '+args + ' is = ' + data.length);
+    }
+);
