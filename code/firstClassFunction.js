@@ -61,10 +61,12 @@ var obj = {
     health: 'good',
     function: greeting3('Shihan'),
     print: function() {
-        console.log('Hi');
+        return this.age + ' , ' + this.health;
     } 
 }
 console.log(obj);
+var x = obj.print();
+console.log(x);
 
 
 /**********************************
