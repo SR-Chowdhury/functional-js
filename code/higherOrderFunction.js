@@ -31,3 +31,20 @@
 var result = greeting()('Shihan Chowdhury');
 result;
 console.log(result);
+
+
+// We can also use Higher Order function with array traversing
+
+var arr = [1, 5, 7, 9, 2];
+
+// Mannual Method | Method 1
+function cbf(element) {
+    console.log(element);
+}
+arr.forEach(cbf);
+
+// Smart Method | Method 2
+arr.forEach(function(element) {
+    console.log(element);
+});
+
