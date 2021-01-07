@@ -93,7 +93,7 @@ console.log(obj.print1('Shihan')); // Hello, Shihan
 
 //  Here we are using self invoking function
 var sum = 10 + (function(){ return 10 })();
-console.log(sum);
+console.log(sum); // 20
 
 
 /***************************************
