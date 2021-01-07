@@ -1,7 +1,7 @@
 /**************************
 
 * Bismillahir Rahmanir Rahim
-* Functional JavaScript
+* Functional JavaScript T-01
 * First Class Function
 * Author : Shihan Chowdhury
 * Thanks to - Twinkle Cats 
@@ -18,15 +18,15 @@ function greeting(name) {
     return 'Hello, ' + name;
 }
 var print = greeting("Shihan Chowdhury");
-console.log(print);
+console.log(print); // Hello, Shihan Chowdhury
 
 // Now we can keep keep greeting function as only a reference in a variable
 var firstVar = greeting;
-console.log(firstVar('Shakib Al Hasan'));
+console.log(firstVar('Shakib Al Hasan')); // Hello, Shakib Al Hasan
 
 // Again we can use firstVar as a function 
 var secondVar = firstVar;
-console.log(secondVar('Mashrafi Bin Mortaza'));
+console.log(secondVar('Mashrafi Bin Mortaza')); // Hello, Mashrafi Bin Mortaza
 
 
 /******************************************
@@ -38,13 +38,22 @@ console.log(secondVar('Mashrafi Bin Mortaza'));
 function greeting2(position) {
     return 'I am the ' + position;
 }
+
+var arr1 = [1, 2, 3];
+console.log(arr1); // [1, 2, 3]
+
+var arr2 = [arr1, greeting2('Winner')];
+console.log(arr2); // [ [1, 2, 3], 'I am the winner']
+
 //  Here we can pass a function as well as we can traverse a fucntion from an Array; 
-var arr = ['Winner or Looser, ', greeting2('Winner')];
-console.log(arr);
+var arr3 = ['Winner or Looser, ', greeting2,  greeting2('Winner')];
+console.log(arr3); // Winner or Looser, function , I am the winner
 
 //  Here we can pass a function from an Array;
-arr.push(greeting2);
-console.log(arr);
+arr3.push(greeting2('Looser'));
+console.log(arr3); // Winner or Looser, Function, I am the winner, I am the Looser
+
+
 
 
 /*********************************************************
@@ -62,11 +71,18 @@ var obj = {
     function: greeting3('Shihan'),
     print: function() {
         return this.age + ' , ' + this.health;
+    },
+    print1: function(name){
+        return 'Hello, ' + name;
     } 
 }
-console.log(obj);
+
+console.log(obj); 
+// age: 28, health: good, function: hello Shihan, print: function
 var x = obj.print();
-console.log(x);
+console.log(x); // 28, good
+console.log(obj.print1('Shihan')); // Hello, Shihan
+
 
 
 /**********************************
@@ -95,6 +111,7 @@ function greeting4v2(input, gree4Fun) {
     // console.log(gree4Fun(input));
 }
 console.log(greeting4v2('Shihan', greeting4));
+// hello, Shihan
 
 
 /************************************************
@@ -103,8 +120,8 @@ console.log(greeting4v2('Shihan', greeting4));
  * 
  ***********************************************/
 
- function base(x) {
-    return function power(n) {
+ function power(x) {
+    return function base(n) {
         var result = 1;
         for (var i=0; i<x; i++) {
             result *= n;
@@ -112,10 +129,10 @@ console.log(greeting4v2('Shihan', greeting4));
         return result;
     }
  }
-var b = base(2);
-var p = b(5);
-console.log(b);
-console.log(p);
+var p = power(2);
+var b = p(5);
+console.log(p); // Function: base
+console.log(b); // 25
 
- var result = base(2)(5);
- console.log(result);
+ var result = power(3)(10);
+ console.log(result); // 1000
