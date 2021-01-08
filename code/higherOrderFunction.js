@@ -1,7 +1,7 @@
 /**************************
 
 * Bismillahir Rahmanir Rahim
-* Functional JavaScript
+* Functional JavaScript T-04
 * Higher Order Function
 * Author : Shihan Chowdhury
 * Thanks to - Twinkle Cats 
@@ -22,15 +22,14 @@
  }
  var x = greeting();
  var y = x('Shihan');
- y;
+ console.log(y); // Hello, Shihan
  var z = x('Chowdhury');
- z;
+ console.log(z); // Hello, Chowdhury
 
 
 //  Aonther method
 var result = greeting()('Shihan Chowdhury');
-result;
-console.log(result);
+console.log(result); // Hello, Shihan Chowdhury
 
 
 // We can also use Higher Order function with array traversing
@@ -39,12 +38,12 @@ var arr = [1, 5, 7, 9, 2];
 
 // Mannual Method | Method 1
 function cbf(element) {
-    console.log(element);
+    console.log(element);  // 1, 5, 7, 9, 2
 }
 arr.forEach(cbf);
 
 // Smart Method | Method 2
 arr.forEach(function(element) {
-    console.log(element);
+    console.log(element); // 1, 5, 7, 9, 2
 });
 
