@@ -1,7 +1,7 @@
 /****************************************
 
 * Bismillahir Rahmanir Rahim
-* Functional JavaScript
+* Functional JavaScript T-06
 * Return a function from another function
 * Author : Shihan Chowdhury
 * Thanks to - Twinkle Cats 
@@ -16,9 +16,9 @@
 
 
  function outer() {
-     console.log('I am outer function');
+     console.log('I am outer function'); // I am outer function
      function inner() {
-         console.log('I am inner function');
+         console.log('I am inner function'); // I am inner function
      }
      return inner();
  }
@@ -27,9 +27,9 @@
 //  OR 
 
 function outer1() {
-    console.log('I am outer function');
+    console.log('I am outer function'); // I am outer function
     function inner1() {
-        console.log('I am inner function');
+        console.log('I am inner function'); // I am inner function
     }
     return inner1;
 }
@@ -39,14 +39,14 @@ result();
 // same code by using anonymous funciton
 
 function outer2() {
-    console.log('I am outer function');
+    console.log('I am outer function'); // I am outer function
     return function() {
-        console.log('I am inner function');
+        console.log('I am inner function'); // I am inner function
     }
 }
 var result1 = outer2();
 // result1(); It also can be use.
-console.log(result1());
+result1();
 
 
 
@@ -59,9 +59,9 @@ function outer3(msg) {
     return inner3;
 }
 var res = outer3('Hello');
-res('Shihan');
 var res1 = outer3('How are you');
-res1('Shihan?');
+res('Shihan'); // Hello, Shihan
+res1('Shihan?'); // How are you, Shihan?
 
 // OR
 
@@ -71,8 +71,8 @@ function outer4(msg) {
     }
     return inner4;
 }
-var x = outer4('Shihan')('Chowhdury');
-x;
+outer4('Shihan')('Chowhdury');
+// Shihan, Chowdhury
 
 // Now with anonymous function
 function outer5(msg) {
@@ -80,4 +80,4 @@ function outer5(msg) {
         console.log(msg + ', ' + args);
     }
 }
-outer5('Shihan')('Chowhdury');
+outer5('Shihan')('Chowhdury'); // Shihan, Chowdhury
