@@ -1,7 +1,7 @@
 /**************************
 
 * Bismillahir Rahmanir Rahim
-* Functional JavaScript
+* Functional JavaScript T-09
 * foreach function in JS
 * Author : Shihan Chowdhury
 * Thanks to - Twinkle Cats 
@@ -29,9 +29,10 @@ function loop(arr1, cbf1, cbf2) {
         cbf2(arr1[i]);
     }
 }
-loop(arr1, function(obj, index, array) {
-    console.log('Element: ' + obj + '; Index : ' + index + '; full form of array: ' + array);
-},
+loop(arr1,
+    function(obj, index, array) {
+        console.log('Element: ' + obj + '; Index : ' + index + '; full form of array: ' + array);
+    },
     function(args) {
         console.log(args);
     }
