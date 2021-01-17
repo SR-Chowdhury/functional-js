@@ -1,7 +1,7 @@
 /**************************
 
 * Bismillahir Rahmanir Rahim
-* Functional JavaScript
+* Functional JavaScript T-10
 * filter function in JS
 * Author : Shihan Chowdhury
 * Thanks to - Twinkle Cats 
@@ -22,6 +22,7 @@ for(var i=0; i<arr.length; i++) {
     }
 }
 console.log(store);
+// 5, 3, 1
 
 // But bro we are js programmer we should have use advance method
 var arr1 = [2, 4, 6, 5, 3, 1, 8];
@@ -31,8 +32,8 @@ var store1 = arr1.filter(function(element) {
 var store2 = arr1.filter(function(element) {
     return element %2 == 0;
 });
-store1;
-store2;
+console.log(store1); // 5, 3, 1
+console.log(store2); // 2, 4, 6, 8
 
 
 // Now we can create this filter function by our own using callback, here we go..
@@ -54,4 +55,6 @@ var even_result = myFilter(arr2, function(element) {
     return element % 2 == 0;
 });
 console.log('MyFiltered Odd data: ' + odd_result);
+// MyFiltered Odd data: 5, 3, 1
 console.log('MyFiltered Even data: ' + even_result);
+// MyFiltered Even data: 2, 4, 6, 8
