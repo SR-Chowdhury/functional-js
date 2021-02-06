@@ -1,7 +1,7 @@
 /**************************
 
 * Bismillahir Rahmanir Rahim
-* Functional JavaScript
+* Functional JavaScript T-12
 * reduce function in JS
 * Author : Shihan Chowdhury
 * Thanks to - Twinkle Cats 
@@ -21,14 +21,14 @@ var sum = 0;
 for( var i = 0; i < arr.length; i++) {
     sum += arr[i];
 }
-console.log('Sum: ' + sum);
+console.log('Sum: ' + sum); // Sum: 29
 
 // No, we are JS programmer. So we should use reduce funciton.
 var arr1 = [2, 4, 6, 8, 10, 12, -13];
 var sum1 = arr1.reduce(function(a, b) {
     return a + b;
 });
-console.log('Sum1: ' + sum1);
+console.log('Sum1: ' + sum1); // Sum1: 29
 
 
 // Now I build by own reduce function, Let's go
@@ -50,6 +50,6 @@ var result = myReduce(arr2, function(element) {
     return element + sum2;
 });
 
-console.log('Sum2: ' + result);
+console.log('Sum2: ' + result); // Sum2: 29
 
 
